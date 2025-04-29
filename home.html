@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>뫼비우스</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* 헤더 */
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    /* 타이틀 */
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      display: inline-flex;
+      align-items: center;
+      gap: 4rem;
+      color: #ffffff;
+      animation: glow 2.5s ease-in-out infinite;
+    }
+
+    h1 img {
+      height: 8rem;
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        text-shadow:
+          0 0 5px #ff4d4d,
+          0 0 10px #ff4d4d,
+          0 0 20px #ff4d4d,
+          0 0 40px #ff1a1a;
+      }
+      50% {
+        text-shadow:
+          0 0 10px #ff6666,
+          0 0 20px #ff6666,
+          0 0 30px #ff3333,
+          0 0 50px #ff1a1a;
+      }
+    }
+
+    /* 기본 섹션 */
+    section {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    section img {
+      width: 70%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Features 영역 */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 5rem auto;
+      width: 70%;
+    }
+
+    .feature {
+      position: relative;
+      flex: 1 1 300px;
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      background: url('https://eidk95seyu2.exactdn.com/en/blog/wp-content/uploads/2023/03/slots-1.jpg?strip=all&lossy=1&ssl=1') center/cover no-repeat;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(245, 197, 24, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      z-index: 0;
+    }
+
+    .feature > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(245, 197, 24, 0.4);
+    }
+
+    .feature h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #f5c518;
+    }
+
+    .feature p, .btn-link {
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    .btn-link {
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .btn-link:hover {
+      color: #f5c518;
+    }
+
+    /* CTA 영역 */
+    .cta-section {
+      position: relative;
+      background: url('https://d1tih6akerdhus.cloudfront.net/islot-web/frontend-islot-viewpage-web-new/58a256fd/static/media/banner.e5318174.jpg') center/70% auto no-repeat;
+      padding: 8rem 1rem;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      filter: brightness(1);
+      transition: filter 0.5s ease;
+    }
+
+    .cta-section:hover {
+      filter: brightness(1.4);
+    }
+
+    .cta-section > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section img {
+      max-width: 250px;
+      margin-bottom: 1rem;
+    }
+
+    .cta {
+      display: inline-block;
+      background: #ff4500;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+
+    .cta:hover {
+      background: #cc3700;
+    }
+
+    /* 마지막 섹션 */
+    .end-section img {
+      width: 70%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+
+    /* 모바일 최적화 */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+        gap: 2rem;
+      }
+
+      h1 img {
+        height: 5rem;
+      }
+
+      section img, .end-section img {
+        width: 90%;
+      }
+
+      .features {
+        width: 90%;
+        flex-direction: column;
+      }
+
+      .cta-section {
+        padding: 4rem 1rem;
+        background-size: 100% auto;
+      }
+
+      .cta {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 헤더 -->
+<header>
+  <h1>
+    <img src="https://www.lightformshop.com/blog/2019/nemo-kepler-math-inspired-wonder/mobius-strip-sphere.gif" alt="Mobius Solutions 로고">
+    Mobius Solutions
+  </h1>
+</header>
+
+<!-- iSLOT1 메인 이미지 -->
+<section>
+  <img src="https://raw.githubusercontent.com/aklexwang/mhome/main/iSLOT1.jpg" alt="iSLOT 제품 소개 1" loading="lazy">
+</section>
+
+<!-- iSLOT2 메인 이미지 -->
+<section>
+  <img src="https://raw.githubusercontent.com/aklexwang/mhome/main/iSLOT2.jpg" alt="iSLOT 제품 소개 2" loading="lazy">
+</section>
+
+<!-- 주요 기능 소개 -->
+<section class="features">
+  <div class="feature">
+    <h3>간단한 API 연결</h3>
+    <p>한 번에 연결하세요</p>
+  </div>
+  <div class="feature">
+    <h3>상담문의</h3>
+    <a href="https://web.telegram.org/k/#@Livescorekorea" target="_blank" class="btn-link">텔레그램으로 상담하기</a>
+  </div>
+</section>
+
+<!-- 무료게임 시작 CTA -->
+<section class="cta-section">
+  <img src="https://islot.com/static/logo.7fad9bbe.png" alt="아이슬롯 로고">
+  <br>
+  <a href="https://islot.io" target="_blank" class="cta">무료게임 시작하기</a>
+</section>
+
+<!-- 마지막 end.jpg -->
+<section class="end-section">
+  <img src="https://raw.githubusercontent.com/aklexwang/mhome/main/end.jpg" alt="iSLOT 제품 소개 마지막" loading="lazy">
+</section>
+
+</body>
+</html>
